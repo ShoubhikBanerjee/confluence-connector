@@ -1,0 +1,5 @@
+CONFLUENCE_HOST = os.getenv('CONFLUENCE_HOST', 'https://some_host.com/confluence/')
+CONFLUENCE_PAT = os.getenv('CONFLUENCE_PAT', '********')
+CONFLUENCE_PAGE_OUTPUT_FORMAT = os.getenv('CONFLUENCE_PAGE_OUTPUT_FORMAT', 'PDF') # HTML / SOUP / PDF / MARKDOWN
+INIT_PAGE_ID = os.getenv('INIT_PAGE_ID', 3864579402)
+OUTPUT_DIR = os.getenv('OUTPUT_DIR', 'Output/')
