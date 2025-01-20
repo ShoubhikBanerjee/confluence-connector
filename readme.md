@@ -30,8 +30,27 @@ pip install -r requirements.txt
 ```
 
 ## Setup and Configuration
+1. Configure your confluence :
 
-1. Set the following environment variables:
+    Create a confluence page and add a table into it with the coloumns `Page` & `URL` :
+
+    Sample table will look like this : 
+
+    | Page    | Url |
+    | -------- | ------- |
+    | Page 1  | some-internal-confluence-page-url   |
+    | Page 2  | some-internal-confluence-page-url     |
+    | Page 3  | some-internal-confluence-page-url    |
+
+    Basically , this confluence page will act as a database/list/vocab of all the URLs that will be parsed down to create your local copies. 
+
+    **NOTE** : Capture the `page id` for this page and we will use this to export as `INIT_PAGE_ID` in the next step.
+
+2. Create your Personal Access Token (PAT) from your confluence user access.
+
+3. Set the following environment variables:
+
+    Note the page id & personal access token (PAT) from the above step and then export it as shown below :
 
     ```env
     export CONFLUENCE_HOST=https://yourcompany.atlassian.net
@@ -41,7 +60,7 @@ pip install -r requirements.txt
     export OUTPUT_DIR=Output/
     ```
 
-2. Run the script using the following command:
+4. Run the script using the following command:
 
     ```bash
     python app.py
