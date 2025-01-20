@@ -7,10 +7,10 @@ def write_to_file(content, directory, file_name, file_type="html"):
     Writes HTML string, BeautifulSoup object, or PDF content to a file in a specified directory with the correct extension.
     
     Parameters:
-    - content: Either a string containing HTML, a BeautifulSoup object, or PDF binary content.
+    - content: Either a string containing HTML, a BeautifulSoup object, Markdown string, or PDF binary content.
     - directory: The directory path where the file should be saved.
     - file_name: The name of the file where the content should be saved (extension is added based on file_type).
-    - file_type: Type of content - either "html", "soup", or "pdf" (default is "html").
+    - file_type: Type of content - either "html", "soup", "markdown" or "pdf" (default is "html").
     """
     # Ensure the directory exists, if not, create it
     os.makedirs(directory, exist_ok=True)
